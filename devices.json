@@ -1,0 +1,287 @@
+[
+    {
+        "vendor": "1a86",
+        "name": "QinHeng Electronics",
+        "devices": [
+          {
+            "devid": "7584",
+            "devname": "CH340S"
+          },
+          {
+            "devid": "e008",
+            "devname": "HID-based serial adapater"
+          },
+          {
+            "devid": "5584",
+            "devname": "CH341 in parallel mode, usb to printer port converter"
+          },
+          {
+            "devid": "7523",
+            "devname": "CH340 serial converter"
+          },
+          {
+            "devid": "752d",
+            "devname": "CH345 MIDI adapter"
+          },
+          {
+            "devid": "5512",
+            "devname": "CH341 in EPP/MEM/I2C mode, EPP/I2C adapter"
+          },
+          {
+            "devid": "5523",
+            "devname": "CH341 in serial mode, usb to serial port converter"
+          }
+        ]
+      },
+      
+      {
+        "vendor": "10c4",
+        "name": "Silicon Labs",
+        "devices": [
+          {
+            "devid": "eacb",
+            "devname": "EFM8UB3 Bootloader"
+          },
+          {
+            "devid": "eac1",
+            "devname": "CP2615 I2S Audio Bridge"
+          },
+          {
+            "devid": "eac9",
+            "devname": "EFM8UB1 Bootloader"
+          },
+          {
+            "devid": "eaca",
+            "devname": "EFM8UB2 Bootloader"
+          },
+          {
+            "devid": "ea91",
+            "devname": "CP2112 HID SMBus/I2C Bridge for CP2614 Evaluation Kit"
+          },
+          {
+            "devid": "ea93",
+            "devname": "CP2112 HID SMBus/I2C Bridge for CP2615 Evaluation Kit"
+          },
+          {
+            "devid": "eab0",
+            "devname": "CP2114 I2S Audio Bridge"
+          },
+          {
+            "devid": "eac0",
+            "devname": "CP2614 MFi Accessory Digital Audio Bridge"
+          },
+          {
+            "devid": "ea70",
+            "devname": "CP2105 Dual UART Bridge"
+          },
+          {
+            "devid": "ea71",
+            "devname": "CP2108 Quad UART Bridge"
+          },
+          {
+            "devid": "ea80",
+            "devname": "CP2110 HID UART Bridge"
+          },
+          {
+            "devid": "ea90",
+            "devname": "CP2112 HID I2C Bridge"
+          },
+          {
+            "devid": "ea60",
+            "devname": "CP210x UART Bridge"
+          },
+          {
+            "devid": "ea61",
+            "devname": "CP210x UART Bridge"
+          },
+          {
+            "devid": "ea63",
+            "devname": "CP210x UART Bridge"
+          },
+          {
+            "devid": "8af8",
+            "devname": "C8051F38x 4K HDMI Audio Extractor w/Audio Amplifier, HDBT Input, Line Audio Input RS-232 Ports and IP Control [VSA-X21]"
+          },
+          {
+            "devid": "8b8c",
+            "devname": "C8051F38x 4K HDMI Audio Extractor w/Audio Amplifier, HDBT Input, Line Audio Input RS-232 Ports and IP Control [SC-3H]"
+          },
+          {
+            "devid": "8db5",
+            "devname": "C8051F38x CATx HDMI Receiver with USB [EX-HDU-R]"
+          },
+          {
+            "devid": "8db6",
+            "devname": "C8051F38x CATx HDMI Receiver"
+          },
+          {
+            "devid": "89fb",
+            "devname": "Qivicon ZigBee Stick"
+          },
+          {
+            "devid": "8a3c",
+            "devname": "C8051F38x HDBaseT Receiver [UHBX-R-XT]"
+          },
+          {
+            "devid": "8a6c",
+            "devname": "C8051F38x 4K HDMI Audio Extractor [EMX-AMP]"
+          },
+          {
+            "devid": "8acb",
+            "devname": "C8051F38x HDBaseT Wall Plate Receiver with IR, RS-232, and PoH [UHBX-R-WP]"
+          },
+          {
+            "devid": "8918",
+            "devname": "C8051F38x HDMI Audio Extractor [VSA-HA-DP]"
+          },
+          {
+            "devid": "8973",
+            "devname": "C8051F38x HDMI Extender [UHBX-8X]"
+          },
+          {
+            "devid": "89c6",
+            "devname": "SPORTident HID device"
+          },
+          {
+            "devid": "89e1",
+            "devname": "C8051F38x HDMI Extender [UHBX-SW3-WP]"
+          },
+          {
+            "devid": "87be",
+            "devname": "C8051F34x HDMI Audio Extractor [EMX-HD-AUD]"
+          },
+          {
+            "devid": "8863",
+            "devname": "C8051F34x Bootloader"
+          },
+          {
+            "devid": "8897",
+            "devname": "C8051F38x HDMI Splitter [UHBX]"
+          },
+          {
+            "devid": "88c9",
+            "devname": "AES HID device"
+          },
+          {
+            "devid": "8660",
+            "devname": "Netronics CANdoISO"
+          },
+          {
+            "devid": "86bc",
+            "devname": "C8051F34x AudioDelay [AD-340]"
+          },
+          {
+            "devid": "8789",
+            "devname": "C8051F34x Extender &amp; EDID MGR [EMX-DVI]"
+          },
+          {
+            "devid": "8497",
+            "devname": "SiLabs Cypress EVB"
+          },
+          {
+            "devid": "84fb",
+            "devname": "Infrared Blackbody Adapter"
+          },
+          {
+            "devid": "8508",
+            "devname": "RS485 Adapter"
+          },
+          {
+            "devid": "8605",
+            "devname": "dilitronics ESoLUX solar lighting controller"
+          },
+          {
+            "devid": "8461",
+            "devname": "Sangoma U100"
+          },
+          {
+            "devid": "8470",
+            "devname": "Juniper Networks BX Series System Console"
+          },
+          {
+            "devid": "8477",
+            "devname": "Balluff RFID Reader"
+          },
+          {
+            "devid": "8496",
+            "devname": "SiLabs Cypress FW downloader"
+          },
+          {
+            "devid": "81e8",
+            "devname": "Zephyr BioHarness"
+          },
+          {
+            "devid": "834b",
+            "devname": "Infrared Online Sensor Adapter"
+          },
+          {
+            "devid": "834e",
+            "devname": "Infrared Sensor Adapter"
+          },
+          {
+            "devid": "8460",
+            "devname": "Sangoma Wanpipe VoiceTime"
+          },
+          {
+            "devid": "8149",
+            "devname": "West Mountain Radio Computerized Battery Analyzer"
+          },
+          {
+            "devid": "814a",
+            "devname": "West Mountain Radio RIGblaster P&amp;P"
+          },
+          {
+            "devid": "814b",
+            "devname": "West Mountain Radio RIGtalk"
+          },
+          {
+            "devid": "818a",
+            "devname": "Silicon Labs FM Radio Reference Design"
+          },
+          {
+            "devid": "80a9",
+            "devname": "CP210x to UART Bridge Controller"
+          },
+          {
+            "devid": "80c4",
+            "devname": "Infrared Thermometer Adapter"
+          },
+          {
+            "devid": "80ca",
+            "devname": "ATM2400 Sensor Device"
+          },
+          {
+            "devid": "813f",
+            "devname": "tams EasyControl"
+          },
+          {
+            "devid": "800b",
+            "devname": "AES"
+          },
+          {
+            "devid": "8030",
+            "devname": "K4JRG Ham Radio devices"
+          },
+          {
+            "devid": "8044",
+            "devname": "USB Debug Adapter"
+          },
+          {
+            "devid": "804e",
+            "devname": "Software Bisque Paramount ME"
+          },
+          {
+            "devid": "0002",
+            "devname": "F32x USBXpress Device"
+          },
+          {
+            "devid": "0003",
+            "devname": "CommandIR"
+          },
+          {
+            "devid": "800a",
+            "devname": "SPORTident"
+          }
+        ]
+      }
+]
