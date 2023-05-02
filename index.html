@@ -42,7 +42,11 @@
         <textarea class="form-control" name="output" id="output" cols="30" rows="10">test</textarea>
         <button type="button" class="btn btn-primary" onclick="sendInfo()">发送</button><br>
         <textarea class="form-control" name="input" id="input" cols="30" rows="10"></textarea>
-        <button type="button" class="btn btn-primary" onclick="receiveInfo()">接收</button><br>
+        <button type="button" class="btn btn-primary" onclick="receiveInfo()">接收</button><br><br>
+        <div class="input-group">
+          <input type="file" class="form-control" id="inputFile" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+          <button class="btn btn-primary" type="button" id="inputGroupFileAddon04" onclick="download()">串口下载</button>
+        </div>
     </div>
     
 

@@ -95,6 +95,12 @@ async function getPorts() {
         itemA.innerText = port.name;
         item.appendChild(itemA);
         document.getElementById("devList").appendChild(item);
+
+        if (index == 0) {
+            selectedPort = index;
+            document.getElementById("selectedDev").innerText = port.name;
+            openPort();
+        }
     });
 
 }
@@ -107,21 +113,29 @@ async function requestPorts() {
 }
 
 async function openPort() {
+    if (isPortOpened) {
+        console.log("--- port has already opended ---");
+        const toastElement = document.getElementById("toastMsg");
+        toastElement.childNodes[1].innerText = "端口已打开";
+        let toastInstance = new bootstrap.Toast(toastElement);
+        toastInstance.show();
+        return;
+    }
     console.log("--- open port ---");
     // console.log("opening at baudrate: " + document.getElementById("baudrate").value);
     await ports[selectedPort].open({ baudRate: selectedBaud });
     encoder = new TextEncoder();
-    decoder = new TextDecoder();
+    decoder = new TextDecoder("gb18030");
     writer = ports[selectedPort].writable.getWriter();
     reader = ports[selectedPort].readable.getReader();
     isPortOpened = true;
 }
 
 async function closePort() {
-    console.log("---close port---");
+    console.log("--- close port ---");
     writer.releaseLock();
     reader.releaseLock();
-    port.close();
+    ports[selectedPort].close();
     isPortOpened = false;
 }
 
@@ -130,18 +144,22 @@ async function sendInfo() {
     if (!isPortOpened) {
         console.log("--- port have not opended ---");
         const toastElement = document.getElementById("toastMsg");
-        toastElement.childNodes[1].innerText = "发送成功";
-        var toastInstance = new bootstrap.Toast(toastElement);
+        toastElement.childNodes[1].innerText = "端口未打开";
+        let toastInstance = new bootstrap.Toast(toastElement);
         toastInstance.show();
         return;
     }
-    console.log("send: " + document.getElementById("output").value);
     await writer.write(encoder.encode(document.getElementById("output").value));
+    console.log("send: " + document.getElementById("output").value);
 }
 
 async function receiveInfo() {
     if (!isPortOpened) {
         console.log("--- port have not opended ---");
+        const toastElement = document.getElementById("toastMsg");
+        toastElement.childNodes[1].innerText = "端口未打开";
+        let toastInstance = new bootstrap.Toast(toastElement);
+        toastInstance.show();
         return;
     }
     const { value, done } = await reader.read();
@@ -151,6 +169,64 @@ async function receiveInfo() {
         document.getElementById("input").value = decoder.decode(value);
         console.log("receive: " + document.getElementById("input").value);
     }
+}
+
+function hexText2buffer(str) {
+    let len = str.length;
+    if (len % 2 == 1) {
+        return;
+    }
+    const buffer = new ArrayBuffer(len / 2);
+    for (let i = 0; i < len; i += 2) {
+        buffer[i / 2] = parseInt(str.substr(i, 2), 16);
+    }
+    return buffer;
+}
+
+
+var test;
+async function download() {
+    console.log("--- testing ---");
+    const toastElement = document.getElementById("toastMsg");
+    toastElement.childNodes[1].innerText = "--- 测试 ---";
+    let toastInstance = new bootstrap.Toast(toastElement);
+    toastInstance.show();
+
+    hexFileList = document.getElementById('inputFile').files;
+    if (hexFileList.length == 0) {
+        console.log("--- no file selected ---");
+        return;
+    }
+    console.log(hexFileList[0]);
+    let hexFile = new FileReader();
+    hexFile.onload = function (event) {
+        let content = event.target.result;
+        let lines = content.split('\r\n');
+        lines.forEach(function (line) {
+            console.log(line);
+            let buffer;
+            if (line[0]==':') {
+                buffer = hexText2buffer(line.slice(1));
+            }else{
+                console.log("--- unreconised file ---");
+                //return;
+            }
+            
+            if (buffer[3]==0) {//数据
+                
+            }else if (buffer[3]==1) {//EOF
+                
+            }else if (buffer[3]==4) {//拓展线性地址
+                console.log("extend address");
+            }
+
+            
+        });
+        test = lines[0];
+        console.log(test);
+    };
+    hexFile.readAsText(hexFileList[0]);
+
 }
 
 
