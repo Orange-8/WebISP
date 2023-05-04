@@ -39,15 +39,15 @@
         <button type="button" class="btn btn-primary" onclick="openPort()">打开串口</button>
         <button type="button" class="btn btn-primary" onclick="closePort()">关闭串口</button><br>
         <br>
-        <textarea class="form-control" name="output" id="output" cols="30" rows="10">test</textarea>
-        <button type="button" class="btn btn-primary" onclick="sendInfo()">发送</button><br>
+        <textarea class="form-control" name="output" id="output" cols="30" rows="10">7F</textarea>
+        <button type="button" class="btn btn-primary" onclick="sendHexInfo()">发送</button><br>
         <textarea class="form-control" name="input" id="input" cols="30" rows="10"></textarea>
         <button type="button" class="btn btn-primary" onclick="receiveInfo()">接收</button><br><br>
         <div class="input-group ">
           <input type="file" class="form-control" id="inputFile" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
 
-          <label class="input-group-text" for="inputGroupSelect02">选择型号</label>
-          <select class="form-select" id="inputGroupSelect02">
+          <label class="input-group-text" for="inputGroupSelect02" >选择型号</label>
+          <select class="form-select" id="selectedEmbedDev" >
             <option selected>Choose...</option>
             <option value="1">STM32</option>
             <option value="2">ESP32</option>
